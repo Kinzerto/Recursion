@@ -1,4 +1,4 @@
-// Regular Function
+// Fibonacci Regular Function
 const fibs = function (num) {
   let current = [0, 1];
   for (let i = 2; i < num; i++) {
@@ -6,7 +6,13 @@ const fibs = function (num) {
   }
   return current;
 };
-console.log(fibs(8));
-const fibsRec = function (num) {};
 
+//fibonacci Recursion
+const fibsRec = function (num) {
+  if (num < 2) return num;
+
+  return fibsRec(num - 2) + fibsRec(num - 1);
+};
+
+console.log(fibsRec(8));
 export { fibs, fibsRec };
