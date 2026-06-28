@@ -17,5 +17,4 @@ function fibsRec(n, result = [0, 1]) {
 
   return fibsRec(n, result);
 }
-console.log(fibsRec(8));
 export { fibs, fibsRec };
