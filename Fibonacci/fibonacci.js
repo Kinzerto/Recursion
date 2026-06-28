@@ -8,11 +8,14 @@ const fibs = function (num) {
 };
 
 //fibonacci Recursion
-const fibsRec = function (num) {
-  if (num < 2) return num;
+function fibsRec(n, result = [0, 1]) {
+  if (n < 2) return [n];
+  if (result.length >= n) return result;
 
-  return fibsRec(num - 2) + fibsRec(num - 1);
-};
+  const next = result[result.length - 1] + result[result.length - 2];
+  result.push(next);
 
+  return fibsRec(n, result);
+}
 console.log(fibsRec(8));
 export { fibs, fibsRec };
