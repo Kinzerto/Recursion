@@ -6,10 +6,10 @@ const mergeSort = function (arr) {
   const left = mergeSort(arr.slice(0, half));
   const right = mergeSort(arr.slice(half));
 
-  let i = 0,
-    j = 0;
+  let i = 0;
+  let j = 0;
+
   while (i < left.length && j < right.length) {
-    console.log("ruuned");
     if (left[i] < right[j]) {
       result.push(left[i++]);
     } else {
