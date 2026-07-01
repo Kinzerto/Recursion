@@ -16,7 +16,7 @@ const mergeSort = function (arr) {
       result.push(right[j++]);
     }
   }
-
+  //return result and grab leftover value
   return result.concat(left.slice(i)).concat(right.slice(j));
 };
 export { mergeSort };
